@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AudioBookPlayer</string>
+    <string name="section_search">Search</string>
+    <string name="section_playing_now">Playing Now</string>
+    <string name="section_new_releases">New Releases</string>
+    <string name="section_genres">Genres</string>
+    <string name="section_my_library">My Library</string>
+</resources>
