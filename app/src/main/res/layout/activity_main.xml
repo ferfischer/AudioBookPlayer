@@ -1,56 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.fernandofischer.audiobookplayer.MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="com.fernandofischer.audiobookplayer.MainActivity">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/section_genres"/>
+    <LinearLayout style="@style/horizontalLinearLayoutStyle">
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/section_search"/>
+            style="@style/sectionStyle"
+            android:background="@android:color/holo_orange_light"
+            android:text="@string/section_genres"
+            android:id="@+id/genres"/>
+
+        <TextView
+            style="@style/sectionStyle"
+            android:background="@android:color/holo_blue_dark"
+            android:text="@string/section_search"
+            android:id="@+id/search"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/section_new_releases"/>
+    <LinearLayout style="@style/horizontalLinearLayoutStyle">
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/section_my_library" />
+        <TextView
+            style="@style/sectionStyle"
+            android:background="@android:color/holo_green_light"
+            android:text="@string/section_new_releases"
+            android:id="@+id/releases"/>
+
+        <TextView
+            style="@style/sectionStyle"
+            android:background="@android:color/holo_purple"
+            android:text="@string/section_my_library"
+            android:id="@+id/library"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/section_playing_now" />
+    <LinearLayout style="@style/horizontalLinearLayoutStyle">
+
+        <TextView
+            style="@style/sectionStyle"
+            android:background="@android:color/holo_red_light"
+            android:text="@string/section_playing_now"
+            android:id="@+id/playing"/>
+
+        <TextView
+            style="@style/sectionStyle"
+            android:background="@android:color/holo_blue_bright"
+            android:text="@string/section_settings"
+            android:id="@+id/settings"/>
     </LinearLayout>
 
 </LinearLayout>
