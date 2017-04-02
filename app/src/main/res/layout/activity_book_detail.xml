@@ -7,13 +7,13 @@
 
     <TextView
         style="@style/descriptionText"
-        android:text="Esta tela vai permitir pesquisar por título de livros, exibindo uma lista como resultado, clicando em algum deles, leva para a activity Book Details. Desafio: Trabalhar com GridView" />
+        android:text="Esta tela vai exibir todos os detalhes do livro escolhido nas outras activities. Exibe também a opção para reproduzir, levando para a activity Playing Now" />
 
     <Button
         android:id="@+id/livro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="LIVRO: resultado da busca" />
+        android:text="Reproduzir" />
 
 </LinearLayout>

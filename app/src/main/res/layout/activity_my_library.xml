@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.fernandofischer.audiobookplayer.MyLibraryActivity">
+    android:background="@android:color/black"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        style="@style/descriptionText"
+        android:text="Esta tela exibira os livros que foram baixados e/ou marcados como favoritos, clicando em algum deles, leva para a activity Book Details. Desafio: Trabalhar com GridView e dados salvos pelo usuario" />
+
+    <Button
+        android:id="@+id/livro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="LIVRO: JANE EYRE" />
+
+</LinearLayout>
+

@@ -1,55 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.fernandofischer.audiobookplayer.MainActivity">
+    android:background="@android:color/black">
 
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="com.fernandofischer.audiobookplayer.MainActivity">
 
-    <LinearLayout style="@style/horizontalLinearLayoutStyle">
+        <LinearLayout style="@style/horizontalLinearLayoutStyle">
 
-        <TextView
-            style="@style/sectionStyle"
-            android:background="@android:color/holo_orange_light"
-            android:text="@string/section_genres"
-            android:id="@+id/genres"/>
+            <TextView
+                android:id="@+id/genres"
+                style="@style/sectionStyle"
+                android:background="@android:color/holo_orange_light"
+                android:text="@string/section_genres" />
 
-        <TextView
-            style="@style/sectionStyle"
-            android:background="@android:color/holo_blue_dark"
-            android:text="@string/section_search"
-            android:id="@+id/search"/>
+            <TextView
+                android:id="@+id/search"
+                style="@style/sectionStyle"
+                android:background="@android:color/holo_red_light"
+                android:text="@string/section_search" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLinearLayoutStyle">
+
+            <TextView
+                android:id="@+id/releases"
+                style="@style/sectionStyle"
+                android:background="@android:color/holo_green_light"
+                android:text="@string/section_new_releases" />
+
+            <TextView
+                android:id="@+id/library"
+                style="@style/sectionStyle"
+                android:background="@android:color/holo_purple"
+                android:text="@string/section_my_library" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLinearLayoutStyle">
+
+            <TextView
+                android:id="@+id/playing"
+                style="@style/sectionStyle" />
+
+            <TextView
+                android:id="@+id/settings"
+                style="@style/sectionStyle"
+                android:background="@android:color/holo_blue_bright"
+                android:text="@string/section_settings" />
+        </LinearLayout>
+
     </LinearLayout>
 
-    <LinearLayout style="@style/horizontalLinearLayoutStyle">
+    <TextView
+        style="@style/descriptionText"
+        android:text="Esta tela mostra as principais funções do aplicativo, a idéia é usar a API do LibriVox para os audiobooks (desafio que se aplica a todas as activities desse app). Clicando no titulo ou na capa do livro, abre a activity Playing Now. Os controles abaixo servirão para controlar o audiobook reproduzido pela activity Playing Now"
+        android:layout_below="@id/buttons" />
+
+    <RelativeLayout
+        style="@style/horizontalLinearLayoutStyle"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/cover"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/book_cover"
+            android:scaleType="centerCrop" />
 
         <TextView
-            style="@style/sectionStyle"
-            android:background="@android:color/holo_green_light"
-            android:text="@string/section_new_releases"
-            android:id="@+id/releases"/>
+            android:id="@+id/book_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@id/cover"
+            android:text="Jane Eyre"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
-            style="@style/sectionStyle"
-            android:background="@android:color/holo_purple"
-            android:text="@string/section_my_library"
-            android:id="@+id/library"/>
-    </LinearLayout>
+            android:id="@+id/book_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/book_title"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/cover"
+            android:text="Charlotte Brontë"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
 
-    <LinearLayout style="@style/horizontalLinearLayoutStyle">
 
-        <TextView
-            style="@style/sectionStyle"
-            android:background="@android:color/holo_red_light"
-            android:text="@string/section_playing_now"
-            android:id="@+id/playing"/>
+        <ImageButton
+            android:id="@+id/next"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/next"
+            android:scaleType="centerCrop" />
 
-        <TextView
-            style="@style/sectionStyle"
-            android:background="@android:color/holo_blue_bright"
-            android:text="@string/section_settings"
-            android:id="@+id/settings"/>
-    </LinearLayout>
+        <ImageButton
+            android:id="@+id/play"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/next"
+            android:background="@drawable/play"
+            android:scaleType="centerCrop" />
 
-</LinearLayout>
+        <ImageButton
+            android:id="@+id/last"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/play"
+            android:background="@drawable/last"
+            android:scaleType="centerCrop" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+

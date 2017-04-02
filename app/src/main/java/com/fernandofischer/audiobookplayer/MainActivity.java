@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import static com.fernandofischer.audiobookplayer.R.id.library;
@@ -33,8 +34,26 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        TextView playingNow = (TextView) findViewById(R.id.playing);
-        playingNow.setOnClickListener(new View.OnClickListener() {
+        ImageView cover = (ImageView) findViewById(R.id.cover);
+        cover.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent playingIntent = new Intent(MainActivity.this, PlayingNowActivity.class);
+                startActivity(playingIntent);
+            }
+        });
+
+        TextView bookTitle = (TextView) findViewById(R.id.book_title);
+        bookTitle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent playingIntent = new Intent(MainActivity.this, PlayingNowActivity.class);
+                startActivity(playingIntent);
+            }
+        });
+
+        TextView bookAuthor = (TextView) findViewById(R.id.book_author);
+        bookAuthor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent playingIntent = new Intent(MainActivity.this, PlayingNowActivity.class);

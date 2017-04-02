@@ -16,35 +16,40 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GenresActivity"
+        <activity
+            android:name=".GenresActivity"
             android:label="@string/title_activity_genres"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.fernandofischer.audiobookplayer.MainActivity" />
         </activity>
-        <activity android:name=".SearchActivity"
+        <activity
+            android:name=".SearchActivity"
             android:label="@string/title_activity_search"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.fernandofischer.audiobookplayer.MainActivity" />
         </activity>
-        <activity android:name=".ReleasesActivity"
+        <activity
+            android:name=".ReleasesActivity"
             android:label="@string/title_activity_releases"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.fernandofischer.audiobookplayer.MainActivity" />
         </activity>
-        <activity android:name=".MyLibraryActivity"
+        <activity
+            android:name=".MyLibraryActivity"
             android:label="@string/title_activity_mylibrary"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.fernandofischer.audiobookplayer.MainActivity" />
         </activity>
-        <activity android:name=".PlayingNowActivity"
+        <activity
+            android:name=".PlayingNowActivity"
             android:label="@string/title_activity_playingnow"
             android:parentActivityName=".MainActivity">
             <meta-data
@@ -54,6 +59,13 @@
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fernandofischer.audiobookplayer.MainActivity" />
+        </activity>
+        <activity android:name=".BookDetailActivity"
+            android:label="@string/title_book_detail"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
