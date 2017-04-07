@@ -20,8 +20,7 @@ public class MainActivity extends AppCompatActivity {
         genres.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent genresIntent = new Intent(MainActivity.this, GenresActivity.class);
-                startActivity(genresIntent);
+                startActivity(new Intent(MainActivity.this, GenresActivity.class));
             }
         });
 
@@ -29,8 +28,7 @@ public class MainActivity extends AppCompatActivity {
         myLibrary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent libraryIntent = new Intent(MainActivity.this, MyLibraryActivity.class);
-                startActivity(libraryIntent);
+                startActivity(new Intent(MainActivity.this, MyLibraryActivity.class));
             }
         });
 
@@ -38,8 +36,7 @@ public class MainActivity extends AppCompatActivity {
         cover.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent playingIntent = new Intent(MainActivity.this, PlayingNowActivity.class);
-                startActivity(playingIntent);
+                startActivity(new Intent(MainActivity.this, PlayingNowActivity.class));
             }
         });
 
@@ -47,8 +44,7 @@ public class MainActivity extends AppCompatActivity {
         bookTitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent playingIntent = new Intent(MainActivity.this, PlayingNowActivity.class);
-                startActivity(playingIntent);
+                startActivity(new Intent(MainActivity.this, PlayingNowActivity.class));
             }
         });
 
@@ -56,8 +52,7 @@ public class MainActivity extends AppCompatActivity {
         bookAuthor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent playingIntent = new Intent(MainActivity.this, PlayingNowActivity.class);
-                startActivity(playingIntent);
+                startActivity(new Intent(MainActivity.this, PlayingNowActivity.class));
             }
         });
 
@@ -65,8 +60,7 @@ public class MainActivity extends AppCompatActivity {
         releases.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent releasesIntent = new Intent(MainActivity.this, ReleasesActivity.class);
-                startActivity(releasesIntent);
+                startActivity(new Intent(MainActivity.this, ReleasesActivity.class));
             }
         });
 
@@ -74,8 +68,7 @@ public class MainActivity extends AppCompatActivity {
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent searchIntent = new Intent(MainActivity.this, SearchActivity.class);
-                startActivity(searchIntent);
+                startActivity(new Intent(MainActivity.this, SearchActivity.class));
             }
         });
 
@@ -83,8 +76,7 @@ public class MainActivity extends AppCompatActivity {
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent settingsIntent = new Intent(MainActivity.this, SettingsActivity.class);
-                startActivity(settingsIntent);
+                startActivity(new Intent(MainActivity.this, SettingsActivity.class));
             }
         });
 
